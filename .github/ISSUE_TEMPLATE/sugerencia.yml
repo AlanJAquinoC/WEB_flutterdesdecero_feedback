@@ -1,0 +1,35 @@
+name: Sugerencia
+description: Una idea para mejorar el curso o un tema que te gustaría aprender.
+title: "[Idea] "
+labels: ["recibido", "sugerencia"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: ¿Sobre qué es tu idea?
+      options:
+        - Un tema nuevo para explicar
+        - Mejorar una lección existente
+        - Un proyecto guiado nuevo
+        - Los laboratorios interactivos
+        - El diseño o la facilidad de uso del sitio
+        - Otra cosa
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Cuéntame tu idea
+      description: ¿Qué te gustaría encontrar y por qué te ayudaría?
+    validations:
+      required: true
+  - type: dropdown
+    id: nivel
+    attributes:
+      label: ¿Cómo te describes?
+      description: Me ayuda a explicar al nivel correcto. Es opcional.
+      options:
+        - Estoy empezando desde cero
+        - Ya programo en otro lenguaje
+        - Ya conozco algo de Flutter
+        - Enseño o acompaño a otras personas

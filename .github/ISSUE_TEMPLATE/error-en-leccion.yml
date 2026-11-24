@@ -1,0 +1,48 @@
+name: Error en una lección
+description: Algo está mal, confuso o no funciona en el contenido del curso.
+title: "[Error] "
+labels: ["recibido", "error-en-leccion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por avisar! Con estos datos lo corrijo mucho más rápido.
+  - type: input
+    id: pagina
+    attributes:
+      label: ¿En qué página pasó?
+      description: Pega el enlace o escribe el nombre de la lección.
+      placeholder: https://flutterdesdecero.pages.dev/leccion/...
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: ¿Qué tipo de problema es?
+      options:
+        - El código no funciona o da error
+        - Una explicación es confusa o incorrecta
+        - Una pregunta del quiz tiene mal la respuesta
+        - Falta de ortografía o redacción
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué viste?
+      description: Cuéntalo con tus palabras. Si es un error de código, pega el mensaje completo.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas ver?
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Tu versión de Flutter (si aplica)
+      description: Corre `flutter --version` en tu terminal.
+      placeholder: Flutter 3.x · Dart 3.x

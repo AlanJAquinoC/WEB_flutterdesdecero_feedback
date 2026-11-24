@@ -1,0 +1,35 @@
+name: Problema del sitio
+description: El sitio no carga, se ve mal o algo se rompe en tu dispositivo.
+title: "[Sitio] "
+labels: ["recibido", "problema-tecnico"]
+body:
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+      description: Cuéntame qué hacías y qué se rompió. Las capturas ayudan muchísimo.
+    validations:
+      required: true
+  - type: input
+    id: pagina
+    attributes:
+      label: Enlace de la página
+      placeholder: https://flutterdesdecero.pages.dev/...
+  - type: dropdown
+    id: dispositivo
+    attributes:
+      label: ¿Desde qué dispositivo?
+      options:
+        - Celular Android
+        - iPhone / iPad
+        - Computadora Windows
+        - Computadora Mac
+        - Computadora Linux
+        - Otro
+    validations:
+      required: true
+  - type: input
+    id: navegador
+    attributes:
+      label: Navegador
+      placeholder: Chrome, Safari, Firefox…
